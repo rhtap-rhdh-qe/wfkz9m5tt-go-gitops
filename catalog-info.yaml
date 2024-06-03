@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wfkz9m5tt-go-gitops
+  description: This is GitOps manifest for wfkz9m5tt-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: wfkz9m5tt-go
+    janus-idp.io/tekton: wfkz9m5tt-go 
+    backstage.io/kubernetes-id: wfkz9m5tt-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wfkz9m5tt-go
